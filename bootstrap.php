@@ -17,8 +17,10 @@ $dotenv->load(path: __DIR__ . '/.env');
  */
 $containerBuilder = new ContainerBuilder();
 
-$parameters = __DIR__ . '/config/DI/Parameters.php';
+$parameters = require_once __DIR__ . '/config/DI/Parameters.php';
 $parameters($containerBuilder);
 
-$dependencies = __DIR__ . '/config/DI/Dependencies.php';
+$dependencies = require_once __DIR__ . '/config/DI/Dependencies.php';
 $dependencies($containerBuilder);
+
+return $containerBuilder->build();
