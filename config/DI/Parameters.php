@@ -7,8 +7,14 @@ use DI\ContainerBuilder;
 return static function (ContainerBuilder $containerBuilder): void {
     $parameters = array(
         'parameters' => array(
-            'app_name' => $_ENV['APP_NAME'],
-            'environment_mode' => $_ENV['ENV_MODE']
+            'environment_mode' => $_ENV['ENV_MODE'],
+            'logger' => array(
+                'application_name' => $_ENV['LOGGER_APPLICATION_NAME'],
+                'directory' => $_ENV['LOGGER_DIRECTORY'],
+                'filename' => $_ENV['LOGGER_FILENAME'],
+                'rotation' => $_ENV['LOGGER_ROTATION'] === 'true',
+                'file_permission' => 0777
+            )
         )
     );
 
