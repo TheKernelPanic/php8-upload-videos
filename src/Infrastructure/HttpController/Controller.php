@@ -6,6 +6,8 @@ namespace Src\Infrastructure\HttpController;
 
 use Psr\Container\ContainerInterface;
 
+use function json_encode;
+
 /**
  * Class Controller
  */
@@ -17,7 +19,8 @@ abstract class Controller
      */
     public function __construct(
         protected ContainerInterface $container
-    ) {}
+    ) {
+    }
 
     /**
      * @param array $data
