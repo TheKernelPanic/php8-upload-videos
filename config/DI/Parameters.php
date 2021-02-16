@@ -14,7 +14,8 @@ return static function (ContainerBuilder $containerBuilder): void {
                 'filename' => $_ENV['LOGGER_FILENAME'],
                 'rotation' => $_ENV['LOGGER_ROTATION'] === 'true',
                 'file_permission' => 0777
-            )
+            ),
+            'temporally_directory' => $_ENV['TEMPORALLY_DIRECTORY']
         )
     );
 
