@@ -15,7 +15,13 @@ return static function (ContainerBuilder $containerBuilder): void {
                 'rotation' => $_ENV['LOGGER_ROTATION'] === 'true',
                 'file_permission' => 0777
             ),
-            'temporally_directory' => $_ENV['TEMPORALLY_DIRECTORY']
+            'temporally_directory' => $_ENV['TEMPORALLY_DIRECTORY'],
+            'messages_agent' => array(
+                'host' => $_ENV['RABBITMQ_HOST'],
+                'port' => $_ENV['RABBITMQ_PORT'],
+                'user' => $_ENV['RABBITMQ_USER'],
+                'password' => $_ENV['RABBITMQ_PASSWORD']
+            )
         )
     );
 
