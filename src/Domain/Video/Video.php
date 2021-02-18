@@ -18,6 +18,11 @@ class Video
     private string|int $id;
 
     /**
+     * @var DateTimeInterface|null
+     */
+    private ?DateTimeInterface $processedAt;
+
+    /**
      * Video constructor.
      * @param string $filename
      * @param DateTimeInterface $createdAt
@@ -50,5 +55,21 @@ class Video
     public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
+    }
+
+    /**
+     * @return DateTimeInterface|null
+     */
+    public function getProcessedAt(): ?DateTimeInterface
+    {
+        return $this->processedAt;
+    }
+
+    /**
+     * @param DateTimeInterface|null $processedAt
+     */
+    public function setProcessedAt(?DateTimeInterface $processedAt): void
+    {
+        $this->processedAt = $processedAt;
     }
 }
