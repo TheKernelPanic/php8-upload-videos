@@ -21,6 +21,17 @@ return static function (ContainerBuilder $containerBuilder): void {
                 'port' => $_ENV['RABBITMQ_PORT'],
                 'user' => $_ENV['RABBITMQ_USER'],
                 'password' => $_ENV['RABBITMQ_PASSWORD']
+            ),
+            'aws' => array(
+                'configuration' => array(
+                    'version' => 'latest',
+                    'region' => $_ENV['AWS_REGION'],
+                    'credentials' => array(
+                        'key' => $_ENV['AWS_CLIENT_ID'],
+                        'secret' => $_ENV['AWS_CLIENT_SECRET']
+                    )
+                ),
+                's3_bucket' => $_ENV['AWS_S3_BUCKET']
             )
         )
     );
