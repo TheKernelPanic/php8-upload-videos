@@ -21,4 +21,10 @@ interface VideoRepositoryInterface
      * @return Video|null
      */
     public function findById(string|int $id): ?Video;
+
+    /**
+     * @param array $criteria
+     * @return array
+     */
+    public function findByCriteria(array $criteria): array;
 }
