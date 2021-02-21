@@ -42,6 +42,14 @@ class Video
     }
 
     /**
+     * @param string|int $id
+     */
+    public function setId(string|int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
      * @return string
      */
     public function getFilename(): string
