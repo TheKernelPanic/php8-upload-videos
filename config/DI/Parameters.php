@@ -32,6 +32,12 @@ return static function (ContainerBuilder $containerBuilder): void {
                     )
                 ),
                 's3_bucket' => $_ENV['AWS_S3_BUCKET']
+            ),
+            'database' => array(
+                'host' => $_ENV['MARIADB_HOST'],
+                'user' => $_ENV['MARIADB_USER'],
+                'password' => $_ENV['MARIADB_PASSWORD'],
+                'database' => $_ENV['MARIADB_DATABASE']
             )
         )
     );
