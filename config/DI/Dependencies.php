@@ -3,6 +3,10 @@
 declare(strict_types=1);
 
 use DI\ContainerBuilder;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\Mapping\Driver\XmlDriver;
+use Doctrine\ORM\Tools\Setup;
 use Monolog\Handler\RotatingFileHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
@@ -46,6 +50,30 @@ return static function (ContainerBuilder $containerBuilder): void {
                   port: $parameters['port']
             );
         },
+        /**
+         * EntityManager
+         */
+        EntityManagerInterface::class => static function (ContainerInterface $container): EntityManagerInterface {
+
+            $configuration = Setup::createXMLMetadataConfiguration(
+                paths: [ __DIR__ . '/../../src/Domain' ],
+                isDevMode: $container->get('parameters')['environment_mode'] === 'DEV'
+            );
+
+            $entityManager = EntityManager::create(
+                connection: $container->get('parameters')['orm'],
+                config: $configuration
+            );
+
+            $driverImpl = new XmlDriver(
+                locator: __DIR__ . '/../ORM/Mapping'
+            );
+
+            $entityManager->getConfiguration()->setMetadataDriverImpl(
+                driverImpl: $driverImpl
+            );
+
+            return $entityManager;
         }
     );
 
