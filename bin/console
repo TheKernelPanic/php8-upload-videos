@@ -1,0 +1,14 @@
+#!/usr/bin/php
+<?php
+
+declare(strict_types=1);
+
+use Src\Infrastructure\CLI\VideoProcessingCommand;
+use Symfony\Component\Console\Application;
+
+$container = require_once __DIR__ . '/../bootstrap.php';
+
+$application = new Application();
+$application->add(new VideoProcessingCommand(container: $container));
+
+$application->run();
