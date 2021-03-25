@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="Src\Domain\Video\Video" table="video">
+        <id name="id" type="guid">
+            <generator strategy="UUID"/>
+        </id>
+        <field name="filename" column="filename" nullable="false" type="string" length="255" />
+        <field name="processedAt" column="processed_at" nullable="true" type="datetime" />
+        <field name="createdAt" column="created_at" nullable="false" type="datetime" />
+    </entity>
+</doctrine-mapping>
