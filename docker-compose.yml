@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  web_server:
+    image: onkernelpanic/docker-nginx-php8-fpm:latest
+    container_name: web_server
+    tty: true
+    ports:
+      - '80:80'
+    volumes:
+      - '.:/var/www/work-directory'
+    depends_on:
+      - messages_agent
+      - database
+
+  messages_agent:
+    image: rabbitmq:3-management
+    container_name: ${RABBITMQ_HOST}
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+    ports:
+      - "5672:${RABBITMQ_PORT}"
+      - '8082:15672'
+
+  database:
+    image: mariadb:10.9.2
+    container_name: ${MARIADB_HOST}
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_PASSWORD}
+      MARIADB_DATABASE: ${MARIADB_DATABASE}
