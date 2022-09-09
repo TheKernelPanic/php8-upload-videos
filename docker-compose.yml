@@ -20,7 +20,7 @@ services:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
     ports:
-      - "5672:${RABBITMQ_PORT}"
+      - "${RABBITMQ_PORT}:${RABBITMQ_PORT}"
       - '8082:15672'
 
   database:
@@ -29,3 +29,5 @@ services:
     environment:
       MARIADB_ROOT_PASSWORD: ${MARIADB_PASSWORD}
       MARIADB_DATABASE: ${MARIADB_DATABASE}
+    ports:
+      - "${MARIADB_PORT}:${MARIADB_PORT}"

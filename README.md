@@ -3,14 +3,14 @@
 
 System for upload video files through a high performance scalable system. :video_camera::floppy_disk:
 
-##Getting Started
+## Getting Started
 
 ###Prerequisites
 
 1. PHP8
 2. ffmpeg library
 
-###Installation
+### Installation
 
 1. Clone repository
 
@@ -26,6 +26,8 @@ System for upload video files through a high performance scalable system. :video
    
 3. Create environment file "__.env__" based on "__.env.dist__".
    
-##Contact
+### Docker run environment
 
-Jorge García - jgg.jobs.development@gvam.com:point_left:
+```bash 
+docker-compose -p php8-upload-videos --env-file .env up -d 
+```
