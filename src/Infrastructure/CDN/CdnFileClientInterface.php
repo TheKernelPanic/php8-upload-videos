@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Src\Infrastructure\CDN;
+namespace KernelPanicUploadVideo\Infrastructure\CDN;
 
 /**
  * Class CdnFileClientInterface
- * @package Src\Infrastructure\CDN
+ * @package KernelPanicUploadVideo\Infrastructure\CDN
  */
 interface CdnFileClientInterface
 {

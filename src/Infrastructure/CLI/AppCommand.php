@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Infrastructure\CLI;
+namespace KernelPanicUploadVideo\Infrastructure\CLI;
 
 
 use Psr\Container\ContainerInterface;
@@ -10,7 +10,7 @@ use Symfony\Component\Console\Command\Command;
 
 /**
  * Class AppCommand
- * @package Src\Infrastructure\CLI
+ * @package KernelPanicUploadVideo\Infrastructure\CLI
  */
 abstract class AppCommand extends Command
 {

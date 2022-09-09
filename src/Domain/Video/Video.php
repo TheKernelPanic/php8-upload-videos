@@ -2,14 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Src\Domain\Video;
+namespace KernelPanicUploadVideo\Domain\Video;
 
 use DateTimeInterface;
 
-/**
- * Class Video
- * @package Src\Domain\Video
- */
 class Video
 {
     /**

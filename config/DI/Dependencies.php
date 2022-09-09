@@ -7,6 +7,7 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\Driver\XmlDriver;
 use Doctrine\ORM\Tools\Setup;
+use KernelPanicUploadVideo\Domain\DomainEventPublisher;
 use Monolog\Handler\RotatingFileHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
@@ -74,6 +75,13 @@ return static function (ContainerBuilder $containerBuilder): void {
             );
 
             return $entityManager;
+        },
+
+        /**
+         * DomainEvent
+         */
+        DomainEventPublisher::class => static function () {
+            return DomainEventPublisher::getInstance();
         }
     );
 

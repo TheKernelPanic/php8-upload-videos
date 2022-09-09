@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Infrastructure\HttpController;
+namespace KernelPanicUploadVideo\Infrastructure\HttpController;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

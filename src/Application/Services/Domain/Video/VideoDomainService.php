@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Src\Application\Services\Domain\Video;
+namespace KernelPanicUploadVideo\Application\Services\Domain\Video;
 
-use Src\Domain\Video\VideoRepositoryInterface;
+use KernelPanicUploadVideo\Domain\Video\VideoRepositoryInterface;
 
 /**
  * Class VideoDomainService
- * @package Src\Application\Services\Domain\Video
+ * @package KernelPanicUploadVideo\Application\Services\Domain\Video
  */
 abstract class VideoDomainService
 {

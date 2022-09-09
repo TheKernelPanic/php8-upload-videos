@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Src\Domain\Video;
+namespace KernelPanicUploadVideo\Domain\Video;
 
 /**
  * Interface VideoRepositoryInterface
- * @package Src\Domain\Video
+ * @package KernelPanicUploadVideo\Domain\Video
  */
 interface VideoRepositoryInterface
 {

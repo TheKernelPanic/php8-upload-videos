@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Src\Infrastructure\Repository\Video;
+namespace KernelPanicUploadVideo\Infrastructure\Repository\Video;
 
 use Ramsey\Uuid\Uuid;
-use Src\Domain\Video\Video;
-use Src\Domain\Video\VideoRepositoryInterface;
-use Src\Infrastructure\Repository\Repository;
+use KernelPanicUploadVideo\Domain\Video\Video;
+use KernelPanicUploadVideo\Domain\Video\VideoRepositoryInterface;
+use KernelPanicUploadVideo\Infrastructure\Repository\Repository;
 
 /**
  * Class VideoRepositoryInterface
- * @package Src\Infrastructure\Repository
+ * @package KernelPanicUploadVideo\Infrastructure\Repository
  */
 final class VideoRepository extends Repository implements VideoRepositoryInterface
 {

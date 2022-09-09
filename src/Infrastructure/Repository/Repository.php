@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Src\Infrastructure\Repository;
+namespace KernelPanicUploadVideo\Infrastructure\Repository;
 
 /**
  * Class Repository
- * @package Src\Infrastructure\Repository
+ * @package KernelPanicUploadVideo\Infrastructure\Repository
  */
 abstract class Repository
 {

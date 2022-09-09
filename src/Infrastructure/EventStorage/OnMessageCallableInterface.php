@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Src\Infrastructure\EventStorage;
+namespace KernelPanicUploadVideo\Infrastructure\EventStorage;
 
 use PhpAmqpLib\Message\AMQPMessage;
 
 /**
  * Interface OnMessageCallableInterface
- * @package Src\Infrastructure\EventStorage
+ * @package KernelPanicUploadVideo\Infrastructure\EventStorage
  */
 interface OnMessageCallableInterface
 {

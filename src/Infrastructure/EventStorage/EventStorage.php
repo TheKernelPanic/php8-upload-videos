@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Infrastructure\EventStorage;
+namespace KernelPanicUploadVideo\Infrastructure\EventStorage;
 
 use Exception;
 use PhpAmqpLib\Channel\AMQPChannel;
@@ -11,7 +11,7 @@ use PhpAmqpLib\Message\AMQPMessage;
 
 /**
  * Class EventStorage
- * @package Src\Infrastructure\EventStorage
+ * @package KernelPanicUploadVideo\Infrastructure\EventStorage
  */
 abstract class EventStorage
 {

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Src\Application\Services\Domain\Video;
+namespace KernelPanicUploadVideo\Application\Services\Domain\Video;
 
 use DateTime;
-use Src\Application\Utils\FilenameGenerator;
-use Src\Domain\Video\Video;
+use KernelPanicUploadVideo\Application\Utils\FilenameGenerator;
+use KernelPanicUploadVideo\Domain\Video\Video;
 
 use function count;
 
 /**
  * Class CreateVideoService
- * @package Src\Application\Services\Domain\Video
+ * @package KernelPanicUploadVideo\Application\Services\Domain\Video
  */
 final class CreateVideoService extends VideoDomainService
 {

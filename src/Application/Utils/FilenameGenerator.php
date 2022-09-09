@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Application\Utils;
+namespace KernelPanicUploadVideo\Application\Utils;
 
 use function strlen;
 use function substr;
@@ -10,7 +10,7 @@ use function rand;
 
 /**
  * Class FilenameGenerator
- * @package Src\Application\Utils
+ * @package KernelPanicUploadVideo\Application\Utils
  */
 class FilenameGenerator
 {

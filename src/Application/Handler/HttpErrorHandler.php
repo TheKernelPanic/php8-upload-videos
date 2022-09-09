@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Application\Handler;
+namespace KernelPanicUploadVideo\Application\Handler;
 
 use Psr\Http\Message\ResponseInterface;
 use Slim\Exception\HttpBadRequestException;
@@ -15,7 +15,7 @@ use Slim\Handlers\ErrorHandler;
 
 /**
  * Class HttpErrorHandler
- * @package Src\Application\Handler
+ * @package KernelPanicUploadVideo\Application\Handler
  */
 class HttpErrorHandler extends ErrorHandler
 {

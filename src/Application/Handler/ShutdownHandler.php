@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Application\Handler;
+namespace KernelPanicUploadVideo\Application\Handler;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Exception\HttpInternalServerErrorException;
@@ -10,7 +10,7 @@ use Slim\ResponseEmitter;
 
 /**
  * Class ShutdownHandler
- * @package Src\Application\Handler
+ * @package KernelPanicUploadVideo\Application\Handler
  */
 class ShutdownHandler
 {
