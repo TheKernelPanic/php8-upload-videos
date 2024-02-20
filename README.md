@@ -3,14 +3,14 @@
 
 System for upload video files through a high performance scalable system. :video_camera::floppy_disk:
 
-##Getting Started
+## Getting Started
 
-###Prerequisites
+### Prerequisites
 
 1. PHP8
 2. ffmpeg library
 
-###Installation
+### Installation
 
 1. Clone repository
 
@@ -26,6 +26,6 @@ System for upload video files through a high performance scalable system. :video
    
 3. Create environment file "__.env__" based on "__.env.dist__".
    
-##Contact
+## Contact
 
 Jorge García - jgg.jobs.development@gvam.com:point_left:
